@@ -1,0 +1,14 @@
+<ion-view hide-nav-bar="false">
+  <ion-nav-title>性别</ion-nav-title>
+  <ion-content class="modifySex-wrapper">
+  <div class="list">
+      <div class="item">
+        <div ng-repeat="x in [{id:1,txt:'男'},{id:2,txt:'女'}] track by $index" ng-click="save(x)">
+          <span ng-bind="x.txt" class="modifySex-label"></span>
+          <i class="modifySex-icon" ng-class="sex.id==x.id?'ion-checkmark':''"></i>
+        </div>
+      </div>
+  </div>
+  </ion-content>
+</ion-view>
+

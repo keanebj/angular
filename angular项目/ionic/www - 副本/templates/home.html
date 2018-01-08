@@ -1,0 +1,19 @@
+<ion-view hide-nav-bar="false" has-tabs>
+  <ion-nav-view name="home-index" ></ion-nav-view>
+  <ion-tabs class="tabs-icon-top tabs-color-active-positive" has-header="true" padding="true">
+    <!-- 首页 Tab -->
+    <ion-tab title="首页" icon-off="home-icon icon-zhuye" icon-on="home-icon icon-zhuye" ui-sref="home.index">
+    </ion-tab>
+
+    <!-- 我的医生 Tab -->
+    <ion-tab title="我的服务" icon-off="home-icon icon-fuwu" icon-on="home-icon icon-fuwu" ui-sref="home.servicehome">
+    </ion-tab>
+
+    <!-- 我的计划 Tab -->
+    <ion-tab title="我的档案" disabled="isNotLogin()" icon-off="home-icon icon-dangan" icon-on="home-icon icon-dangan" ui-sref="healthFiles">
+    </ion-tab>
+    <!-- 健康档案 Tab -->
+    <ion-tab title="我" disabled="isNotLogin()" icon-off="home-icon icon-wode" icon-on="home-icon icon-wode" ui-sref="home.myhome">
+    </ion-tab>
+  </ion-tabs>
+</ion-view>

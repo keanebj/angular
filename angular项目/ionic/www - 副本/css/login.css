@@ -1,0 +1,93 @@
+.index-header{
+  display:-webkit-box;
+  -webkit-box-pack:center;
+  -webkit-box-align:center;
+
+}
+.index-logo{
+  height: 85px;
+  width: 100px;
+  margin-top: 64px;
+}
+.logo{
+  width: 34px;
+  height: 40px;
+  margin-left: 31px;
+}
+.logo>img{
+  width: 100%;
+  height: 100%;
+}
+.logo_health{
+  width: 90px;
+  height: 30px;
+  margin-top: 20px;
+}
+.logo_health>img{
+  width: 100%;
+  height: 100%;
+}
+.index-input{
+  margin-top:66px;
+  display:-webkit-box;
+  -webkit-box-pack:center;
+  -webkit-box-align:center;
+  -webkit-box-orient:vertical;
+}
+.input-list{
+  width:82%;
+}
+.input-list-user{
+  border-bottom:1px solid #dedfe0;
+}
+.input-list-user>span{
+  display:inline-block;
+  margin-left:-10px;
+  margin-right:15px;
+  color:#666666;
+}
+.input-list-pwd{
+  border-bottom:1px solid #dedfe0;
+}
+.input-list-pwd>span{
+  display:inline-block;
+  margin-left:-10px;
+  margin-right:15px;
+  color:#666666;
+}
+.index-login-btn{
+  width:82%;
+  color:#666666;
+  margin-top:37px;
+}
+.index-login-btn-border{
+  border:1px solid #adadad !important;
+}
+.input-user::-webkit-input-placeholder{
+  color:#999;
+}
+.input-pwd::-webkit-input-placeholder{
+  color:#999;
+}
+.index-menus{
+  width:82%;
+  margin-top:38px;
+}
+.index-phone-login{
+  float:left;
+  color:#00acee;
+}
+.index-forget_password{
+  float:right;
+  color:#666666;
+}
+.icon-size-20{
+  font-size:20px;
+}
+.show-pwd{
+  width: 40px;
+}
+.button-eye>i:before{
+  font-size:1.5rem;
+  color:#00acee;
+}

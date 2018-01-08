@@ -1,0 +1,61 @@
+.doctor-list{
+    background:#fff;
+}
+.doctorlist-info{
+    display:-webkit-box;
+    height:5.12rem;
+    border-bottom:1px solid #eee;
+    margin-bottom:0rem;
+}
+.doctorlist-info-headpic{
+    width:2.4rem;
+    height:2.4rem;
+    margin-left:1rem;
+    margin-top:0.81rem;
+}
+.doctorlist-info-headpic>img{
+    width:100%;
+    border-radius: 50%;
+    height:100%;
+}
+.doctorlist-info-news{
+    margin-top:0.81rem;
+    margin-left:0.5rem;
+    -webkit-box-flex:1;
+}
+.doctorlist-info-signinfo{
+    margin-top:0.81rem;
+    margin-right:1rem;
+    width:4.12rem;
+}
+.doctorlist-info-news>div{
+    margin-bottom:0.2rem;
+}
+.doctorlist-info-news-name{
+    font-size:0.81rem;
+    }
+.doctorlist-doctorname{
+    font-weight:bold;
+    
+}
+.doctorlist-doctorjob{
+    color:#00acee;
+}
+.doctorlist-info-news-hospital{
+    color:#666666;
+    font-size:0.81rem;
+}
+.doctorlist-info-news-area{
+    font-size:0.62rem;
+    color:#999999;
+}
+.doctorlist-info-signinfo-people{
+    color:#747474;
+}
+.doctorlist-info-signinfo-num{
+    color:#ffa823;
+}
+.doctorlist-info-signinfo-distances{
+    margin-top:1.2rem;
+    color:#b5b5b5;
+}

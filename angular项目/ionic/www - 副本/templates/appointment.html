@@ -1,0 +1,45 @@
+<ion-view hide-nav-bar="false">
+  <ion-nav-title>{{title}}</ion-nav-title>
+  <ion-content class="telephonereservation">
+  <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+    <div class="telephonereservation-list" ng-repeat="x in listData.pageList"
+      ng-class="{'telephonereservation-disabled':x.enableSchedule!='1' || x.scheduledNbr==x.maxScheduleNbr}">
+      <div class="telephonereservation-list-title">
+        <div class="telephonereservation-list-title-date">
+          <p class="telephonereservation-list-title-time">{{x.beginTime}}~{{x.endTime}}</p>
+          <p class="telephonereservation-list-title-week" ng-bind="{0:'星期一',1:'星期二',2:'星期三',3:'星期四',4:'星期五',5:'星期六',6:'星期天'}[x.dayOfWeek]"></p>
+          <p class="telephonereservation-list-title-month" ng-bind="x.workDate|date:'yyyy年MM月dd日'"></p>
+        </div>
+        <div class="telephonereservation-list-title-order">
+          <div class="telephonereservation-list-title-overorder">
+            <span>已预约</span><em class="telephonereservation-num" ng-bind="x.scheduledNbr"></em>
+          </div>
+          <div class="telephonereservation-list-title-surplus">
+            <span>剩余</span><em class="telephonereservation-num" ng-bind="x.maxScheduleNbr - x.scheduledNbr"></em>
+          </div>
+        </div>
+      </div>
+      <div class="telephonereservation-list-body">
+        <div class="telephonereservation-list-body-symptom">
+          <div>症状：</div>
+          <textarea placeholder="请输入症状描述" ng-disabled="canSchedule(x)" ng-model="x.symptomDesc" auto-height-on-input></textarea>
+        </div>
+        <div class="telephonereservation-list-body-symptom">
+          <div>备注：</div>
+          <textarea placeholder="请输入备注信息" ng-disabled="canSchedule(x)" ng-model="x.comments" auto-height-on-input></textarea>
+        </div>
+      </div>
+      <div class="telephonereservation-list-btn">
+        <button class="button button-small telephonereservation-list-btn-button"
+        ng-disabled="canSchedule(x)"
+        ng-bind="x.enableSchedule!='1'?'已预约':x.scheduledNbr==x.maxScheduleNbr?'预约已满':'我要预约'"
+        ng-click="save(x)"></button>
+      </div>
+    </div>
+    <ion-infinite-scroll
+      ng-if="canLoadMore()"
+      distance="10%"
+      immediate-check="false"
+      on-infinite="loadMoreData()"></ion-infinite-scroll>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,75 @@
+.recordbloodpressure{
+    width:100%;
+    background:#eeeeee;
+}
+.recordbloodpressure-img{
+    width:100%;
+    height:11.12rem;
+    background:#3dcba4;
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+}
+.recordbloodpressure-img>img{
+    display:inline-block;
+    width:4.31rem;
+    height:5rem;
+}
+.recordbloodpressure-date{
+    height:2.81rem;
+    border-bottom:1px solid #eeeeee;
+    background:#fff;
+    line-height:2.81rem;
+    padding-left:1rem;
+    font-size:0.87rem;
+}
+.recordbloodpressure-time-pressure{
+    width:100%;
+    height:6.93rem;
+    background:#fff;
+    display:-webkit-box;
+}
+.recordbloodpressure-time-tallpressure{
+    -webkit-box-flex:1;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.recordbloodpressure-time-tall-num{
+    font-size:0.87rem;
+}
+.recordbloodpressure-time-tall-num>span{
+    font-size:1.43rem;
+}
+.recordbloodpressure-time-tall-text{
+    margin-top:1.68rem;
+    font-size:0.75rem;
+}
+.recordbloodpressure-time-lowpressure{
+    -webkit-box-flex:1;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+    box-sizing: border-box;
+}
+.recordbloodpressure-time-low-num{
+    font-size:0.87rem;
+}
+.recordbloodpressure-time-low-num>span{
+    font-size:1.43rem;
+}
+.recordbloodpressure-time-low-text{
+    margin-top:1.68rem;
+    font-size:0.75rem;
+}
+.bloodpressure-tall-low{
+    width:1px;
+    display: inline-block;
+    height:4rem;
+    background:#dedfe0;
+    margin-top:1.37rem;
+}

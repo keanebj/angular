@@ -1,0 +1,88 @@
+.register-form{
+  display:flex;
+  display:-webkit-flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.register-input-area{
+  display: block;
+  width: 100%;
+  padding: 1.02rem 1.56rem;
+  background: #fff;
+}
+.register-input-area>.item-input{
+  line-height:2.75rem;
+  height: 3.5rem;
+  border-bottom:1px solid #dedfe0;
+  padding-left:0;
+  display:flex;
+  display:-webkit-flex;
+}
+.register-input-area>.item-input:last-child{
+  border:none;
+  vertical-align: bottom;
+}
+.register-under-line{
+  border-bottom:1px solid #dedfe0 !important;
+}
+
+.register-input-area>.item-input>span{
+  padding-left:0.31rem;
+  display:inline-block;
+  width:4.43rem;
+}
+.register-input-area>.item-input>.register-input{
+  flex:1;
+  -webkit-flex:1;
+  vertical-align: bottom;
+  height: 100%;
+  background: #fff;
+}
+
+.register-input-area>.item-input>.register-input::-webkit-input-placeholder{
+  color:#999;
+  font-size:0.81rem;
+}
+.register-input-area>.item-input>.register-btn-color{
+  border:1px solid #dedfe0;
+  width: 6.25rem;
+  height:1.88rem;
+  min-height: 2.25rem;
+  line-height: 1.88rem;
+  font-size: 0.81rem;
+  margin-left:0.63rem;
+  padding: 0;
+}
+.register-input-area>.item-input>.register-btn-color:disabled{
+  color:#666;
+}
+.register-input-area>.item-input>.register-btn-color:active{
+  background:#3b5997;
+  color:white;
+}
+.register-submit-btn{
+    width: 100%;
+    padding: 0 1.25rem;
+}
+.register-submit-btn>button:active{
+  color:white !important;
+  background:#3b5997 !important;
+}
+.register-submit-btn>button:disabled{
+  color:#666;
+}
+.register-submit-btn>.register-btn-color{
+  border:1px solid #dedfe0;
+  font-size: 1rem;
+}
+.register-terms{
+  padding:0 1.56rem;
+  margin:0 auto;
+}
+.register-terms>a{
+  margin-left:0.63rem;
+}
+.register-input.register-code{
+  padding-right:0;
+}

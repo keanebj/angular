@@ -1,0 +1,20 @@
+.modifySex-wrapper{
+  background:#eee !important;
+}
+.modifySex-wrapper .item{
+  padding:0 1rem;
+}
+.modifySex-wrapper .item>div{
+  line-height:2.44rem;
+  height:2.44rem;
+}
+.modifySex-wrapper .item>div:first-child{
+  border-bottom:1px solid #eee;
+}
+.modifySex-label{
+  float:left;
+}
+.modifySex-icon{
+  float:right;
+  color:#00acee;
+}

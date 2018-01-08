@@ -1,0 +1,20 @@
+<ion-view hide-nav-bar="false">
+  <ion-nav-title>医生列表</ion-nav-title>
+  <ion-content class="doctor-list" scoll-height>
+    <div ng-repeat="doctor in listDoctor">
+      <dl class="doctorlist-info" ui-sref="cancelacontract({doctorId:doctor.doctorId})">
+        <dt class="doctorlist-info-headpic"><img src="{{doctor.headerImage}}" alt=""></dt>
+        <dd class="doctorlist-info-news">
+          <div class="doctorlist-info-news-name"><span class="doctorlist-doctorname">{{doctor.realName}}</span> | <span class="doctorlist-doctorjob">{{doctor.jobTitle}}</span></div>
+          <div class="doctorlist-info-news-hospital">{{doctor.orgName}}-{{doctor.departmentName}}</div>
+          <div class="doctorlist-info-news-area">{{doctor.provinceName}}{{doctor.cityName}}{{doctor.districtName}}</div>
+        </dd>
+        <dd class="doctorlist-info-signinfo">
+          <div class="doctorlist-info-signinfo-people">已签<span class="doctorlist-info-signinfo-num">50</span>人</div>
+          <div class="doctorlist-info-signinfo-distances">3.2km</div>
+        </dd>
+      </dl>
+    </div>
+  </ion-content>
+</ion-view>
+

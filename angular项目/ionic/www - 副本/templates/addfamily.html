@@ -1,0 +1,51 @@
+<ion-view hide-nav-bar="false">
+  <ion-nav-title>添加家人</ion-nav-title>
+  <ion-nav-buttons side="secondary">
+      <button class="button button-stable" ng-if="familyUserId==null" ng-click="save()">
+       确定
+      </button>
+    <button class="button button-stable" ng-if="familyUserId>0" ng-click="updatefamily()">
+       编辑
+      </button>
+    </ion-nav-buttons>
+  <ion-content class="addfamily">
+      <div class="modifyuserinfo">
+        <div class="modifyuserinfo-info">
+          <div class="modifyuserinfo-info-headpic" ngf-select="selectFiles($files)" ngf-accept="'image/*'">
+            <div class="modifyuserinfo-headpic-text">自定义头像</div>
+            <!-- {{familyUserId}} -->
+            <div class="modifyuserinfo-headpic-img">
+            <img ngf-src="user.headerImage?user.headerImage+'-suishi200':'./img/myhome-userimg.png'" alt="">
+            </div>
+            <span><i class="icon ion-ios-arrow-right"></i></span>
+          </div>
+          <div class="modifyuserinfo-info-name">
+            <div class="modifyuserinfo-headpic-name-text">姓名</div>
+            <div class="modifyuserinfo-headpic-username-text"><input type="text" ng-model="data.name" placeholder="请输入名字" id=""></div>
+            <span><i class="icon ion-ios-arrow-right"></i></span>
+          </div>
+          <div class="modifyuserinfo-info-name" ng-click="showFamilySex(1)">
+            <div class="modifyuserinfo-headpic-name-text">性别</div>
+            <div class="modifyuserinfo-headpic-username-text">{{SexValue}}</div>
+            <span><i class="icon ion-ios-arrow-right"></i></span>
+          </div>
+          <div class="modifyuserinfo-info-name" ng-model="data.birth" mobiscroll-date="dateSettings">
+            <div class="modifyuserinfo-headpic-name-text">请选择日期：</div>
+            <div class="modifyuserinfo-headpic-username-text">{{data.birth|date:'yyyy年MM月dd日'}}</div>
+            <span><i class="icon ion-ios-arrow-right"></i></span>
+          </div>
+          <div class="modifyuserinfo-info-name" ng-click="showFamilyRrelationship(1)">
+            <div class="modifyuserinfo-headpic-name-text">家人关系</div>
+            <div class="modifyuserinfo-headpic-username-text">{{dict.dictName}}</div>
+            <span><i class="icon ion-ios-arrow-right"></i></span>
+          </div>
+          <div class="modifyuserinfo-info-name">
+            <div class="modifyuserinfo-headpic-name-text">手机号</div>
+            <div class="modifyuserinfo-headpic-username-text"><input type="text" name="" ng-model="data.phone" placeholder="请输入家人手机号" id=""></div>
+            <span></span>
+          </div>
+        </div>
+      </div>
+  </ion-content>
+</ion-view>
+

@@ -1,0 +1,25 @@
+<ion-view hide-nav-bar="false">
+  <ion-nav-title>血糖</ion-nav-title>
+    <ion-nav-buttons side="secondary">
+      <button class="button button-stable" ng-click="save()">
+       保存
+      </button>
+    </ion-nav-buttons>
+  <ion-content class="recordbloodglucose">
+    <div high-charts config="chartConfig" class="high-charts" load-chart-data="loadChartData"></div>
+    <div class="recordbloodglucose-date" ng-model="data.datetime" mobiscroll-datetime="dateSettings">
+      {{data.datetime|datetime:'yyyy年MM月dd日 HH:mm'}}
+    </div>
+    <div class="recordbloodglucose-time-pressure">
+      <div class="recordbloodglucose-time-pressure-record" click-on-start ng-model="data.numVal" mobiscroll-number="numSettings">
+        <span class="recordbloodglucose-time-pressure-num" ng-bind="data.numVal"></span>mmol/L
+      </div>
+      <div class="recordbloodglucose-subsisted">
+        <span ng-repeat="x in mealTimeList" ng-bind="x.dictName" ng-class="{'recordbloodglucose-subsisted-check':data.selectedTime == x}" ng-click="data.selectedTime = x"></span>
+      </div>
+      <div class="recordbloodglucose-subsisted-time">
+        <span ng-repeat="x in mealTypeList" ng-bind="x.dictName" ng-class="{'recordbloodglucose-subsisted-check':data.selectedType == x}" ng-click="data.selectedType = x"></span>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,166 @@
+/*健康档案公共样式 start*/
+.healthFiles-tab-header{
+  display:flex;
+}
+.healthFiles-tab-header>li{
+  list-style:none;
+  flex:1;
+  height:2.38rem;
+  line-height:2.38rem;
+  text-align:center;
+}
+.healthFiles-tab-header>li:active{
+  background:#eee;
+}
+.healthFiles-tab-header>.active>span{
+  display:inline-block;
+  padding: 0 0.5rem;
+  color:#00acee;
+  border-bottom:2px solid #00acee;
+  height: 2.38rem;
+}
+
+.healthFiles-slides .swiper-container{
+  background: #eee;
+}
+
+.healthFiles-foot-bar{
+  height:3.13rem;
+  padding:0.25rem 1.5rem 0.38rem 1.5rem;
+}
+.healthFiles-foot-bar>button{
+  margin:0 auto;
+  height:2.44rem;
+  width:100%;
+}
+
+.healthFiles-content-wrapper{
+  background: #eee;
+  padding:0.94rem;
+  min-height:100%;
+}
+.healthFiles-content-wrapp{
+  background: #eee;
+  min-height:100%;
+}
+.healthFiles-content-wrapper>article{
+  background: #fff;
+  margin-bottom:0.44rem;
+  padding:0 0.5rem;
+  border-radius:3px;
+  height:8.63rem;
+  display:flex;
+  flex-direction:column;
+}
+
+.healthFiles-normal{
+  border-top:4px solid #00acee;
+}
+.healthFiles-warm{
+  border-top:4px solid #fcb800;
+}
+.healthFiles-danger{
+  border-top:4px solid #ef2a2a;
+}
+.healthFiles-item-title{
+  height:1.88rem
+}
+.healthFiles-normal>.healthFiles-item-title{
+  border-bottom:1px solid rgba(0,172,283,.5);
+}
+.healthFiles-warm>.healthFiles-item-title{
+  border-bottom:1px solid rgba(252,184,0,.5);
+}
+.healthFiles-danger>.healthFiles-item-title{
+  border-bottom:1px solid rgba(239,42,42,.5);
+}
+.healthFiles-item-title>date{
+  padding:0.31rem;
+  float:left;
+}
+.healthFiles-item-title>time{
+  padding:0.31rem;
+  float:right;
+}
+.healthFiles-value-font{
+  font-size:1.6rem;
+  font-weight: 500;
+}
+.healthFiles-unit-font{
+  color:#666;
+  font-size:0.75rem;
+}
+.healthFiles-name-font{
+  font-size:0.9rem;
+}
+
+.healthFiles-content-wrapper .ion-arrow-up-c{
+  color:#f0000b;
+}
+.healthFiles-content-wrapper .ion-arrow-down-c{
+  color:#00a908;
+}
+.healthFiles-content-wrapper .ion-minus{
+  color:#00acee;
+}
+.healthFiles-name-font+i{
+  padding-left:0.75rem;
+}
+.healthFiles-item-wrapper{
+  padding:1.5rem 0;
+  height:6.75rem;
+  width:100%;
+}
+.healthFiles-item-content{
+  height:100%;
+  display:flex;
+}
+.healthFiles-item-content>li{
+  flex:1;
+  text-align:center;
+}
+.healthFiles-item-before{
+  border-right:1px solid #dedfe0;
+}
+.healthFile-item-name{
+  padding-top: 0.3rem;
+}
+.healthFiles-item-one-col-content{
+  height:6.5rem;
+}
+.healthFiles-item-one-col-value{
+  height:3.5rem;
+  padding-top:1.5rem;
+  text-align:center;
+}
+.healthFiles-item-one-col-name{
+  padding-top: 0.5rem;
+  text-align:center;
+}
+/*健康档案公共样式 end*/
+
+/*健康档案-血脂 start*/
+/*健康档案-血脂 end*/
+
+/* 健康档案-血压 begin*/
+/* 健康档案-血压 end*/
+
+/* 健康档案-BMI begin*/
+.healthFiles-bmi-value-font{
+  font-size:1.88rem;
+  font-weight: 600;
+}
+.healthFiles-bmi-item{
+  flex:0.5 !important;
+  padding-top: 0.3rem;
+}
+.healthFiles-bmi-item-before{
+  flex:1 !important;
+}
+.healthFiles-bmi-item .healthFiles-name-font{
+  font-size:0.75rem;
+}
+.healthFiles-bmi-item .healthFiles-value-font{
+  font-size:1.3rem;
+}
+/* 健康档案-BMI end*/

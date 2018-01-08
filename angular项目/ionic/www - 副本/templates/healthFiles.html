@@ -1,0 +1,193 @@
+<ion-view hide-nav-bar="false">
+<ion-nav-title>健康档案</ion-nav-title>
+<ion-nav-buttons side="secondary">
+<button class="button button-small button-clear" ui-sref="docupload"><i class="fa fa-camera"></i></button>
+</ion-nav-buttons>
+<ion-content scroll="false">
+<div class="healthFiles-tab-header">
+  <li ng-repeat="x in ['血压','血糖','血脂','BMI']" ng-click="toggleTab($index)" ng-class="$index==slider.activeIndex?'active':''">
+    <span ng-bind="x"></span>
+  </li>
+</div>
+<ion-slides class="healthFiles-slides" slider="data.slider">
+<!-- 血压 -->
+<ion-slide-page>
+<ion-content class="has-footer">
+<ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+<ion-scroll>
+<div class="healthFiles-content-wrapper">
+  <article ng-repeat="x in listBloodPressure.pageList" ng-class="{'0':'healthFiles-normal','1':'healthFiles-warm','2':'healthFiles-danger'}[x.identify]">
+    <section class="healthFiles-item-title clearFix">
+      <date ng-bind="x.recordDate|datetime:'yyyy-MM-dd'"></date>
+      <time ng-bind="x.recordDate|timeWithDateName"></time>
+    </section>
+    <section class="healthFiles-item-wrapper">
+      <ul class="healthFiles-item-content">
+        <li class="healthFiles-item-before">
+          <div>
+            <span class="healthFiles-value-font" ng-bind="x.examItems.SBP.checkItemResult"></span>
+            <span class="healthFiles-unit-font" ng-bind="x.examItems.SBP.unit"></span>
+          </div>
+          <div class="healthFile-item-name">
+            <span class="healthFiles-name-font">高压</span>
+            <i ng-class="{'2':'ion-arrow-up-c','1':'ion-arrow-down-c','0':'ion-minus'}[x.examItems.SBP.trend]"></i>
+          </div>
+        </li>
+        <li class="healthFiles-item-after">
+          <div>
+            <span class="healthFiles-value-font" ng-bind="x.examItems.DBP.checkItemResult">86</span>
+            <span class="healthFiles-unit-font" ng-bind="x.examItems.DBP.unit"></span>
+          </div>
+          <div class="healthFile-item-name">
+            <span class="healthFiles-name-font">低压</span>
+            <i ng-class="{'2':'ion-arrow-up-c','1':'ion-arrow-down-c','0':'ion-minus'}[x.examItems.DBP.trend]"></i>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </article>
+</div>
+</ion-scroll>
+<ion-infinite-scroll
+  ng-if="canLoadMore(0)"
+  distance="10%"
+  immediate-check="false"
+  on-infinite="loadMoreData()"></ion-infinite-scroll>
+</ion-content>
+</ion-slide-page>
+<ion-slide-page>
+<!-- 血糖 -->
+<ion-content class="has-footer">
+<ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+<ion-scroll>
+<div class="healthFiles-content-wrapper">
+  <article ng-repeat="x in listBloodGlucose.pageList" ng-class="{'0':'healthFiles-normal','1':'healthFiles-warm','2':'healthFiles-danger'}[x.identify]">
+    <section class="healthFiles-item-title clearFix">
+      <date ng-bind="x.recordDate|datetime:'yyyy-MM-dd'"></date>
+      <time ng-bind="x.mealTypeName"></time>
+    </section>
+    <section class="healthFiles-item-wrapper">
+      <ul class="healthFiles-item-content">
+        <li class="healthFiles-item-before">
+          <div>
+            <span class="healthFiles-value-font" ng-bind="x.examItems.PRE_MEAL?x.examItems.PRE_MEAL.checkItemResult:'--'"></span>
+            <span class="healthFiles-unit-font">mmol/L</span>
+          </div>
+          <div class="healthFile-item-name">
+            <span class="healthFiles-name-font">餐前</span>
+            <i ng-class="{'2':'ion-arrow-up-c','1':'ion-arrow-down-c','0':'ion-minus'}[x.examItems.PRE_MEAL.trend]"></i>
+          </div>
+        </li>
+        <li class="healthFiles-item-after">
+          <div>
+            <span class="healthFiles-value-font" ng-bind="x.examItems.AFT_MEAL?x.examItems.AFT_MEAL.checkItemResult:'--'"></span>
+            <span class="healthFiles-unit-font">mmol/L</span>
+          </div>
+          <div class="healthFile-item-name">
+            <span class="healthFiles-name-font">餐后</span>
+            <i ng-class="{'2':'ion-arrow-up-c','1':'ion-arrow-down-c','0':'ion-minus'}[x.examItems.AFT_MEAL.trend]"></i>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </article>
+</div>
+</ion-scroll>
+<ion-infinite-scroll
+  ng-if="canLoadMore(1)"
+  distance="10%"
+  immediate-check="false"
+  on-infinite="loadMoreData()"></ion-infinite-scroll>
+</ion-content>
+</ion-slide-page>
+<ion-slide-page>
+<!-- 血脂 -->
+<ion-content class="has-footer">
+<ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+<ion-scroll>
+<div class="healthFiles-content-wrapper">
+  <article ng-repeat="x in listBloodFat.pageList" ng-class="{'0':'healthFiles-normal','1':'healthFiles-warm','2':'healthFiles-danger'}[x.identify]">
+    <section class="healthFiles-item-title clearFix">
+      <date ng-bind="x.recordDate|datetime:'yyyy-MM-dd'"></date>
+      <time ng-bind="x.recordDate|timeWithDateName"></time>
+    </section>
+    <section class="healthFiles-item-one-col-content">
+      <div class="healthFiles-item-one-col-value">
+        <span class="healthFiles-value-font" ng-bind="x.examItems.BF.checkItemResult"></span>
+        <span class="healthFiles-unit-font" ng-bind="x.examItems.BF.unit"></span>
+      </div>
+      <div class="healthFiles-item-one-col-name">
+        <span class="healthFiles-name-font">血脂</span>
+        <i ng-class="{'2':'ion-arrow-up-c','1':'ion-arrow-down-c','0':'ion-minus'}[x.examItems.BF.trend]"></i>
+      </div>
+    </section>
+  </article>
+</div>
+</ion-scroll>
+<ion-infinite-scroll
+  ng-if="canLoadMore(2)"
+  distance="10%"
+  immediate-check="false"
+  on-infinite="loadMoreData()"></ion-infinite-scroll>
+</ion-content>
+</ion-slide-page>
+<ion-slide-page>
+<!-- BMI -->
+<ion-content class="has-footer">
+<ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+<ion-scroll>
+<div class="healthFiles-content-wrapper">
+  <article ng-repeat="x in listBasicCheck.pageList" ng-class="{'0':'healthFiles-normal','1':'healthFiles-warm','2':'healthFiles-danger'}[x.identify]">
+    <section class="healthFiles-item-title clearFix">
+      <date ng-bind="x.recordDate|datetime:'yyyy-MM-dd'"></date>
+      <time ng-bind="x.recordDate|timeWithDateName"></time>
+    </section>
+    <section class="healthFiles-item-wrapper">
+      <ul class="healthFiles-item-content">
+        <li class="healthFiles-item-before healthFiles-bmi-item-before">
+          <div>
+            <span class="healthFiles-bmi-value-font" ng-bind="x.examItems.BMI.checkItemResult"></span>
+          </div>
+          <div class="healthFile-item-name">
+            <span class="healthFiles-name-font">BMI</span>
+            <i ng-class="{'2':'ion-arrow-up-c','1':'ion-arrow-down-c','0':'ion-minus'}[x.examItems.BMI.trend]"></i>
+          </div>
+        </li>
+        <li class="healthFiles-bmi-item">
+          <div>
+            <span class="healthFiles-value-font" ng-bind="x.examItems.HEIGHT.checkItemResult"></span>
+            <span class="healthFiles-unit-font">cm</span>
+          </div>
+          <div class="healthFile-item-name">
+            <span class="healthFiles-name-font">身高</span>
+            <i ng-class="{'2':'ion-arrow-up-c','1':'ion-arrow-down-c','0':'ion-minus'}[x.examItems.HEIGHT.trend]"></i>
+          </div>
+        </li>
+        <li class="healthFiles-bmi-item">
+          <div>
+            <span class="healthFiles-value-font" ng-bind="x.examItems.WEIGHT.checkItemResult"></span>
+            <span class="healthFiles-unit-font">kg</span>
+          </div>
+          <div class="healthFile-item-name">
+            <span class="healthFiles-name-font">体重</span>
+            <i ng-class="{'2':'ion-arrow-up-c','1':'ion-arrow-down-c','0':'ion-minus'}[x.examItems.WEIGHT.trend]"></i>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </article>
+</div>
+</ion-scroll>
+<ion-infinite-scroll
+  ng-if="canLoadMore(3)"
+  distance="10%"
+  immediate-check="false"
+  on-infinite="loadMoreData()"></ion-infinite-scroll>
+</ion-content>
+</ion-slide-page>
+</ion-slides>
+</ion-content>
+<ion-footer-bar class="healthFiles-foot-bar">
+<button class="button button-small button-positive" ng-click="dataRecord()">记录数据</button>
+</ion-footer-bar>
+</ion-view>

@@ -1,0 +1,23 @@
+<ion-view hide-nav-bar="false">
+  <ion-nav-title>我的家人</ion-nav-title>
+  <ion-nav-buttons side="secondary">
+      <button class="button button-stable" ng-click="doSomething()">
+       保存
+      </button>
+    </ion-nav-buttons>
+  <ion-content class="familylist">
+    <div class="family-list">
+      <div class="schedule-user-info" ng-repeat="familylist in familylist" ui-sref="addfamily({familyUserId:familylist.relUserId})">
+        <div class="schedule-user-info-head"><img src="img/user.png" alt=""></div>
+        <div class="schedule-user-info-name">
+          <span>{{familylist.relUserName}}</span> <br />
+          关系|{{familylist.relTypeName}}
+        </div>
+      </div>
+      <div class="familylist-add-family" ui-sref="addfamily">
+        <button class="button add-family">
+        </button>
+      </div>
+    </div>
+  </ion-content>
+  </ion-view>

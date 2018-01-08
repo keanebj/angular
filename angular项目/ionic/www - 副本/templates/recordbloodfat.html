@@ -1,0 +1,23 @@
+<ion-view hide-nav-bar="false">
+  <ion-nav-title>血脂</ion-nav-title>
+    <ion-nav-buttons side="secondary">
+      <button class="button button-stable" ng-click="save()">
+       保存
+      </button>
+    </ion-nav-buttons>
+  <ion-content class="recordbloodfat">
+    <div high-charts config="chartConfig" class="high-charts" load-chart-data="loadChartData"></div>
+    <div class="recordbloodfat-date" ng-model="data.datetime" mobiscroll-datetime="dateSettings">
+      {{data.datetime|datetime:'yyyy年MM月dd日 HH:mm'}}
+    </div>
+    <div class="recordbloodfat-time-pressure">
+      <div class="recordbloodfat-time-pressure-record" click-on-start ng-model="data.numVal" mobiscroll-number="numSettings">
+        <span class="recordbloodfat-time-pressure-num" ng-bind="data.numVal"></span>mmol/L
+      </div>
+      <div class="recordbloodfat-subsisted">
+        血脂
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

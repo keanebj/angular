@@ -1,0 +1,82 @@
+.myhomedoctor-doctor{
+    margin: 0px auto;
+    width:90%;
+    /* height: 132px; */
+    background: #00acee;
+    padding-top: 1.5rem;
+}
+.myhomedoctor-doctor>dl{
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+    margin-bottom: 0px;
+}
+.myhomedoctor-doctor>dl>dt{
+    width:4.8rem;
+    height:4.8rem;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    position:relative;
+}
+.myhomedoctor-doctor>dl>dt>img{
+    width:100%;
+    height:100%;
+}
+.mydoctor{
+    width:100%;
+    height:11.25rem;
+    background:#00acee;
+}
+.myhomedoctor-name{
+    margin-top: 15px;
+    color:#ffffff;
+    font-size:16px;
+}
+.myhomedoctor-post{
+    margin-top: 10px;
+    color:#ffffff;
+    font-size: 15px;
+}
+.mydoctor-title{
+    position:absolute;
+    bottom: -14px;
+    left:50%;
+    margin-left:-32.5px;
+    width:4rem;
+    height:1.12rem;
+    background:#ffb018;
+    color:#ffffff;
+    text-align:center;
+    border-radius:15px;
+    font-size: 0.625rem;
+}
+.myhomedoctor-service-time{
+    height:2.18rem;
+    line-height:2.18rem;
+    text-indent:1.5rem;
+    color:#262626;
+    background:#ffffff;
+    border-bottom:1px solid #eeeeee;
+}
+.myhomedoctor-service-date-time{
+    height:2.5rem;
+    line-height:2.5rem;
+    text-indent:1.5rem;
+    background:#fff;
+    margin-bottom:5px;
+
+}
+.myhomedoctor-service-content{
+    height:2.12rem;
+    background:#ffffff;
+    text-indent:1.5rem;
+    border-bottom:1px solid #eeeeee;
+    line-height:2.12rem;
+}
+.myhomedoctor-service-cont{
+    width:100%;
+    background:#ffffff;
+    padding: 0.75rem 1.5rem;
+    line-height: 1.37rem;
+}

@@ -1,0 +1,154 @@
+<ion-view hide-nav-bar="false">
+  <ion-nav-title>多点健康</ion-nav-title>
+  <ion-nav-buttons side="secondary">
+  <button class="button button-small button-clear" ng-click="toggleMenu()"><i class="ion-navicon-round"></i></button>
+  </ion-nav-buttons>
+  <ion-content class="home has-tabs">
+    <div class="home-index-cricle-wrapper">
+      <div class="cricle-ring">
+        <div class="cricle-part" ng-repeat="(key,value) in cricle"
+          ng-style="{transform:'rotate('+(45 + value.index*deg)+'deg)'}"
+          ng-class="'cricle-part-'+value.status"
+          ui-sref="{{value.state}}">
+            <div ng-style="{transform:'translateX(-50%) translateY(-50%) rotate('+(-45 - value.index*deg)+'deg)'}">
+              <i class="iconfont" ng-class="value.icon"></i>
+              <span ng-bind="value.name"></span>
+            </div>
+          </div>
+          <div class="cricle-ring-avatar" ui-sref="login" ng-if="isNotLogin()" ngf-thumbnail="'img/headimg.png'" ngf-as-background="true"></div>
+          <div class="cricle-ring-name-label" ng-if="isNotLogin()">请登录</div>
+
+          <div class="cricle-ring-avatar" ng-if="!isNotLogin()"
+            ngf-as-background="true"
+            ngf-thumbnail="user.headerImage?user.headerImage+'-suishi200':'img/07.jpg'"></div>
+          <div class="cricle-ring-name-label" ng-if="!isNotLogin()" ng-bind="user.name"></div>
+      </div>
+      <div class="cricle-ring-legend">
+        <div class="cricle-ring-low">正常</div>
+        <div class="cricle-ring-normal">过低</div>
+        <div class="cricle-ring-high">过高</div>
+      </div>
+    </div>
+    <div class="home-myplay-advice">
+      <div class="home-myplan" ui-sref="schedule">
+        <div class="home-myplan-title" ng-class="{'home-myplan-title-disabled':!lastSchedulePlan}">
+          我的计划
+        </div>
+        <div class="home-myplan-body" ng-if="!!lastSchedulePlan">
+          <div class="home-myplan-body-date" ng-bind="lastSchedulePlan.workDate|date:'yyyy年MM月dd日'"></div>
+          <div class="home-myplan-body-time">
+            <time ng-bind="lastSchedulePlan.beginTime"></time>
+            -
+            <time ng-bind="lastSchedulePlan.endTime"></time>
+          </div>
+          <div class="home-myplan-logo">
+            <i class="servicehome-lists icon-video-copy"
+              ng-class="{'home-myplan-logo-inactive':lastSchedulePlan.scheduleType!='VEDIO_SCHEDULE'}"></i>
+            <i class="servicehome-lists icon-yiyao"
+              ng-class="{'home-myplan-logo-inactive':lastSchedulePlan.scheduleType!='OUTPATIENT'}"></i>
+            <i class="servicehome-lists icon-shouji"
+              ng-class="{'home-myplan-logo-inactive':lastSchedulePlan.scheduleType!='TEL_SCHEDULE'}"></i>
+          </div>
+        </div>
+        <div class="home-myplan-body home-myplan-title-disabled" ng-if="!lastSchedulePlan">
+          <div>暂时没有数据</div>
+        </div>
+      </div>
+      <div class="home-doctoradvice">
+        <div class="home-doctoradvice-title">
+          医生建议
+        </div>
+        <div class="home-doctoradvice-body" ng-if="!!lastFeedback" ng-bind="lastFeedback.doctorMark"></div>
+        <div class="home-myplan-body home-myplan-title-disabled" ng-if="!lastFeedback">
+          <div>暂时没有数据</div>
+        </div>
+      </div>
+    </div>
+    <div class="home-img-advice">
+      <img src="./img/home-img-advice.png" alt="">
+    </div>
+    <div class="recommend-doctor">
+      <div class="recommend-doctor-title">
+        <div class="recommend-physician">
+          推荐医师
+        </div>
+        <div class="recommend-all" ui-sref="doctorlist">
+          全部
+        </div>
+        <span>&gt;</span>
+      </div>
+      <div class="recomend-doctor-list">
+        <dl ng-repeat="x in doctorList" ui-sref="cancelacontract({doctorId:x.doctorId})">
+          <dt><img ngf-src="x.headerImage||'./img/doctor.png'" alt=""></dt>
+          <dd class="recomend-doctor-list-info">
+            <p class="recomend-doctor-list-name"><em ng-bind="x.realName"></em> | <span ng-bind="x.jobTitle"></span></p>
+            <p class="recomend-doctor-list-post">{{x.orgName}}-{{x.departmentName}}</p>
+            <p class="recomend-doctor-list-address"><span></span>{{x.provinceName}}{{x.cityName}}{{x.districtName}}</p>
+          </dd>
+          <dd class="recomend-doctor-sign">
+            <p class="recomend-doctor-sign-num">已签<span>{{x.signedNbr}}</span>人</p>
+            <!-- <p>3.2km</p> -->
+          </dd>
+        </dl>
+      </div>
+    </div>
+    <div class="health-advice">
+      <div class="health-advice-title">
+        <div class="health-advice-title-section">
+          健康咨询
+        </div>
+        <div class="health-advice-title-all">
+          全部
+        </div>
+        <span>&gt;</span>
+      </div>
+      <div class="health-advice-list">
+        <dl>
+          <dt>
+            <img src="./img/health-advice.png" alt="">
+          </dt>
+          <dd class="health-advice-list-text">
+            <p class="health-advice-list-text-info">想要你的视力健康，那么看看这些你都做到了吗？</p>
+            <p class="health-advice-list-text-store">盛唐本草旗舰店</p>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <img src="./img/health-advice.png" alt="">
+          </dt>
+          <dd class="health-advice-list-text">
+            <p class="health-advice-list-text-info">想要你的视力健康，那么看看这些你都做到了吗？</p>
+            <p class="health-advice-list-text-store">盛唐本草旗舰店</p>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <img src="./img/health-advice.png" alt="">
+          </dt>
+          <dd class="health-advice-list-text">
+            <p class="health-advice-list-text-info">想要你的视力健康，那么看看这些你都做到了吗？</p>
+            <p class="health-advice-list-text-store">盛唐本草旗舰店</p>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <img src="./img/health-advice.png" alt="">
+          </dt>
+          <dd class="health-advice-list-text">
+            <p class="health-advice-list-text-info">想要你的视力健康，那么看看这些你都做到了吗？</p>
+            <p class="health-advice-list-text-store">盛唐本草旗舰店</p>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <img src="./img/health-advice.png" alt="">
+          </dt>
+          <dd class="health-advice-list-text">
+            <p class="health-advice-list-text-info">想要你的视力健康，那么看看这些你都做到了吗？</p>
+            <p class="health-advice-list-text-store">盛唐本草旗舰店</p>
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

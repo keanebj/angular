@@ -1,0 +1,32 @@
+<ion-view hide-nav-bar="false">
+  <ion-nav-title>拍照上传</ion-nav-title>
+  <ion-content class="docupload">
+      <div class="docupload-list">
+        <div class="docupload-photo">
+          <div class="docupload-photo-list" ng-repeat="x in uploadInfo.files" ng-if="x.progress==100">
+            <img ngf-src="x.result.result[0]?x.result.result[0] + '-suishi200':''">
+            <span class="docupload-remove" ng-click="removeFile(x)"><i class="ion-minus-round"></i></span>
+          </div><div class="docupload-photo-list" ngf-select="selectFiles($files)" multiple ngf-accept="'image/*'">
+            <i class="ion-ios-plus-empty"></i>
+          </div>
+        </div>
+      </div>
+      <div class="docupload-censorate">
+        <span>检查机构</span>
+        <input type="text" ng-model="data.orgName" placeholder="请输入检查机构名称">
+      </div>
+      <div class="docupload-checktime">
+        <span>检查时间</span>
+        <div ng-model="data.date" ng-bind="data.date|date:'yyyy年MM月dd日'" mobiscroll-date="dateSettings"></div>
+      </div>
+      <div class="docupload-remarks">
+        <p>备注</p>
+        <textarea cols="30" rows="10" ng-model="data.comments"></textarea>
+      </div>
+  </ion-content>
+      <div class="bar bar-footer row">
+        <button class="button button-calm col col-100 docupload-btn" ng-click="save()">
+          保存
+        </button>
+      </div>
+</ion-view>

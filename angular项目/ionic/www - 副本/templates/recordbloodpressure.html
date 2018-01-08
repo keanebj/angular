@@ -1,0 +1,33 @@
+<ion-view hide-nav-bar="false">
+  <ion-nav-title>血压</ion-nav-title>
+    <ion-nav-buttons side="secondary">
+      <button class="button button-stable" ng-click="save()">
+       保存
+      </button>
+    </ion-nav-buttons>
+  <ion-content class="recordbloodpressure">
+    <div high-charts config="chartConfig" class="high-charts" load-chart-data="loadChartData"></div>
+    <div class="recordbloodpressure-date" ng-model="data.datetime" mobiscroll-datetime="dateSettings">
+      {{data.datetime|datetime:'yyyy年MM月dd日 HH:mm'}}
+    </div>
+    <div class="recordbloodpressure-time-pressure">
+      <div class="recordbloodpressure-time-tallpressure" click-on-start ng-model="data.hightVal" mobiscroll-number="numSettings">
+          <div class="recordbloodpressure-time-tall-num">
+            <span ng-bind="data.hightVal"></span>mmhg
+          </div>
+          <div class="recordbloodpressure-time-tall-text">
+              高压
+          </div>
+      </div>
+      <div class="bloodpressure-tall-low"></div>
+      <div class="recordbloodpressure-time-lowpressure" ng-model="data.lowVal" mobiscroll-number="numSettings">
+          <div class="recordbloodpressure-time-low-num">
+            <span ng-bind="data.lowVal"></span>mmhg
+          </div>
+          <div class="recordbloodpressure-time-low-text">
+              低压
+          </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

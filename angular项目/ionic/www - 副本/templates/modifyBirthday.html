@@ -1,0 +1,15 @@
+<ion-view hide-nav-bar="false">
+  <ion-nav-title>出生日期</ion-nav-title>
+  <ion-nav-buttons side="secondary">
+    <button class="button button-stable" ng-click="save()">
+     确定
+    </button>
+  </ion-nav-buttons>
+  <ion-content class="modifyusername">
+    <div class="list">
+      <div class="item item-input" click-on-start ng-model="data.birth" mobiscroll-date="dateSettings">
+          请选择日期：{{data.birth|date:'yyyy年MM月dd日'}}
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

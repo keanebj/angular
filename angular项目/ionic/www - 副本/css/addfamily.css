@@ -1,0 +1,14 @@
+.addfamily{
+    background:#eeeeee;
+}
+.addfamily-btn{
+    margin-top:2rem;
+}
+.addfamily-record{
+    padding:12px 15px;
+    font-size:0.75rem;
+}
+.modifyuserinfo-headpic-username-text>input{
+    float:right;
+    width:100px;
+}

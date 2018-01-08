@@ -1,0 +1,37 @@
+<ion-view hide-nav-bar="false">
+    <ion-nav-title>用户登录</ion-nav-title>
+    <ion-content>
+        <div class="index-header">
+            <div class="index-logo">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="logo_health">
+                    <img src="img/logo_health.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="index-input">
+            <div class="input-list">
+                <div class="item-input input-list-user">
+                    <span class="fa fa-user"></span><input type="tel" id="input-user" class="input-user"  placeholder="请输入用户名/手机号" ng-model="data.phone">
+                </div>
+                <div class="item-input input-list-pwd">
+                    <span class="ion-locked"></span>
+                    <input type="password" class="input-pwd" ng-show="!showpwd" placeholder="请输入密码" ng-model="data.password">
+                    <input type="text" class="input-pwd" ng-show="showpwd" placeholder="请输入密码" ng-model="data.password">
+                    <button class="button button-clear button-eye" ng-click="togglePwd()">
+                      <i ng-class="!showpwd?'ion-eye':'ion-eye-disabled'"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="index-menus">
+                <span class="index-phone-login" ui-sref="register">手机注册</span>
+                <span class="index-forget_password" ui-sref="Forgetpwd">忘记密码</span>
+            </div>
+            <div class="index-login-btn">
+              <button class="button button-block button-light index-login-btn-border" ng-click="login()">登录</button>
+          </div>
+        </div>
+    </ion-content>
+</ion-view>

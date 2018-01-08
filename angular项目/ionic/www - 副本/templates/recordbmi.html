@@ -1,0 +1,35 @@
+<ion-view hide-nav-bar="false">
+  <ion-nav-title>BMI</ion-nav-title>
+    <ion-nav-buttons side="secondary">
+      <button class="button button-stable" ng-click="save()">
+       保存
+      </button>
+    </ion-nav-buttons>
+  <ion-content class="recordbmi">
+    <div high-charts config="chartConfig" class="high-charts" load-chart-data="loadChartData"></div>
+    <div class="recordbmi-date" ng-model="data.datetime" mobiscroll-datetime="dateSettings">
+      {{data.datetime|datetime:'yyyy年MM月dd日 HH:mm'}}
+    </div>
+    <div class="recordbmi-time-pressure">
+      <div class="recordbmi-time-tallpressure" click-on-start ng-model="data.heightVal" mobiscroll-number="heightSettings">
+          <div class="recordbmi-time-tall-num">
+            <span ng-bind="data.heightVal"></span>cm
+          </div>
+          <div class="recordbmi-time-tall-text">
+              身高
+          </div>
+      </div>
+      <div class="bloodpressure-tall-low">
+
+      </div>
+      <div class="recordbmi-time-lowpressure" ng-model="data.weightVal" mobiscroll-number="weightSettings">
+          <div class="recordbmi-time-low-num">
+            <span ng-bind="data.weightVal"></span>kg
+          </div>
+          <div class="recordbmi-time-low-text">
+              体重
+          </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

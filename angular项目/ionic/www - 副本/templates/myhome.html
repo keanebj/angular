@@ -1,0 +1,56 @@
+<ion-view hide-nav-bar="false">
+  <ion-nav-title>我的主页</ion-nav-title>
+  <ion-nav-buttons side="secondary">
+    <button class="button button-clear myhome-userinfo-header-button" ng-click="toggleMenu()">
+     <i class="icon iconfont icon-xiaoxi"></i>
+    </button>
+  </ion-nav-buttons>
+  <ion-content overflow-scroll>
+    <div class="myhome">
+      <div class="myhome-userinfo has-tabs">
+        <dl>
+          <dt class="myhome-user-head"><img ngf-src="user.headerImage||'./img/doctor.png'" alt=""></dt>
+          <dd class="myhome-user-name">{{user.name}}<span>VIP</span></dd>
+          <dd class="myhome-user-sex">男<span>|</span> {{user.age}}岁</dd>
+        </dl>
+        <div class="myhome-user-address"><i class="fa fa-map-marker myhome-address"></i>{{user.addr}}</div>
+      </div>
+      <div class="myhome-about" ui-sref="modifyuserinfo">
+        <div class="myhome-user-info">
+          个人信息
+          <span>&gt;</span>
+        </div>
+      </div>
+      <div class="myhome-about" ui-sref="familylist">
+        <div class="myhome-user-info">
+          我的家人
+          <span>&gt;</span>
+        </div>
+      </div>
+      <div class="myhome-about" ui-sref="myhomedoctor">
+        <div class="myhome-user-info">
+          我的家庭医生
+          <span>&gt;</span>
+        </div>
+      </div>
+      <div class="myhome-user-vip">
+        <div class="myhome-user-info">
+          会员专区
+          <span>&gt;</span>
+        </div>
+      </div>
+      <div class="myhome-user-help" ui-sref="suggest">
+        <div class="myhome-user-info">
+          帮助与反馈
+          <span>&gt;</span>
+        </div>
+      </div>
+      <div class="myhome-about" ui-sref="setting">
+        <div class="myhome-user-info">
+          设置
+          <span>&gt;</span>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

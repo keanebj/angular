@@ -1,0 +1,17 @@
+<ion-modal-view hide-nav-bar="false">
+  <ion-header-bar>
+    <div class="bar bar-header bar-positive row row-center">
+      <div class="col col-50 col-center">
+        添加家人
+      </div>
+      <div class="col col-50 col-center">
+        <button class="button button-clear pull-right button-small" ng-click="cancelSelect()">取消</button>
+      </div>
+    </div>
+  </ion-header-bar>
+  <ion-content class="family-relationship">
+    <ion-list ng-repeat="listFamily in listFamilyRel">
+        <a class="item" ng-click="addfamilyDict(listFamily.dictCode,listFamily.dictName)">{{listFamily.dictName}}</a>
+    </ion-list>
+  </ion-content>
+</ion-modal-view>

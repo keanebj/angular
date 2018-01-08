@@ -1,0 +1,20 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <div class="bar bar-header bar-positive row row-center">
+      <div class="col col-50 col-center">
+        选择地区
+      </div>
+      <div class="col col-50 col-center">
+        <button class="button button-clear pull-right button-small" ng-click="cancelArea()">取消</button>
+      </div>
+    </div>
+  </ion-header-bar>
+  <ion-content class="selectArea-wrapper">
+    <div class="list">
+      <a class="item item-icon-right" ng-repeat="x in areas" ng-click="selectArea(nowLevel+1,x)">
+        <i class="icon ion-ios-arrow-right"></i>
+        {{x.regionName}}
+      </a>
+    </div>
+  </ion-content>
+</ion-modal-view>

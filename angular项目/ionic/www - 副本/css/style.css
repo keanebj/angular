@@ -1,0 +1,138 @@
+/* Empty. Add your own CSS if you like */
+input:-webkit-autofill,textarea:-webkit-autofill,select:-webkit-autofill{
+-webkit-box-shadow: 0 0 0 1000px transparent inset;
+}
+.clearFix::after{
+content:".";
+display:block;
+height:0;
+clear:both;
+visibility:hidden;
+}
+.healthFiles-content-wrapp{
+background: #eee;
+min-height:100%;
+}
+.yzm{
+margin-left:1.1rem;
+}
+.modifyuserinfo-info-name{
+position:relative;
+}
+.code_verify{
+font-family: "微软雅黑";
+display: block;
+padding: 0 15px;
+height: 24px;
+line-height: 23px;
+border: 1px solid #eeeeee;
+border-radius: 6px;
+color: #666666;
+cursor: pointer;
+position: absolute;
+top: 7px;
+right: 15px;
+}
+.button-back{
+width:1.7rem !important;
+height:100% !important;
+font-size:1.5rem !important;
+transition:opacity .3s ease;
+}
+.button-back:active{
+opacity: 0.2 !important;
+}
+/*通用list begin*/
+.content-list-wrapper{
+background:#eee;
+}
+.content-list{
+background: #fff;
+}
+.content-list-item{
+display:flex;
+height:2.3rem;
+line-height:2.3rem;
+border-bottom:1px solid #dedfe0;
+}
+.content-list-item-label{
+font-size:14px;
+width: 110px;
+text-align: left;
+text-indent: 24px;
+}
+.content-list-item-text{
+flex:1;
+text-align:right;
+}
+.content-list-item-text+span{
+  width:35px;
+  display:inline-block;
+  text-align:center;
+}
+/*通用list end*/
+.mbsc-fr{
+  background:rgba(0,0,0,0.3) !important;
+}
+.fileupload-content .fileupload-list-item{
+  height:2.3rem;
+  line-height:2.3rem;
+  position: relative;
+}
+.fileupload-list-file{
+  width:100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.fileupload-progress-bar{
+  position: absolute;
+  display:flex;
+  width:100%;
+  bottom:0;
+  left:0;
+}
+.fileupload-progress-bar-passed{
+  width: 0;
+  border-bottom:2px solid #00acee;
+}
+.fileupload-progress-bar-not-completed{
+  flex:1;
+  border-bottom:2px solid #ccc;
+}
+.fileupload-footer-bar{
+  width:100%;
+  display:flex;
+}
+.fileupload-footer-bar>a{
+  box-sizing: border-box;
+  height: 34px;
+  flex:1;
+  text-align: center;
+  line-height: 34px;
+}
+.fileupload-btn-confirm{
+  border-right:1px solid #ccc;
+}
+.touch-with-hightlight{
+  transition: background .1s ease-in;
+}
+.touch-with-hightlight:active{
+  background: rgba(106,106,106,.1);
+}
+.tab-disabled{
+  color:#ccc !important;
+}
+.high-charts{
+  width:100%;
+  height:15.12rem;
+}
+.bgcolor00acee .bar.bar-header{
+  background-color : #00acee !important;
+}
+.bgcolor8373cb .bar.bar-header{
+  background-color : #8373cb !important;
+}
+.bgcolor4a8aca .bar.bar-header{
+  background-color : #4a8aca !important;
+}

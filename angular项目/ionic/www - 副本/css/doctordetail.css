@@ -1,0 +1,119 @@
+.oversign{
+    position:absolute;
+    top:0px;
+    right:1rem;
+    color:#fff;
+}
+.doctorlist{
+    background:#eeeeee;
+}
+.doctorlist-generalservice{
+    margin-top:5px;
+    background:#fff;
+    height:4.5rem;
+    text-indent:1rem;
+}
+.cancelacontract-introduce{
+    width:100%;
+    min-height:8.81rem;
+    background:#fff;
+    margin-top:5px;
+    padding-left:1rem;
+    height:auto;
+}
+.cancelacontract-introduce-title{
+    height:1.87rem;
+    line-height:1.87rem;
+    border-bottom:1px solid #eeeeee;
+    color:#3d3d3d;
+}
+.cancelacontract-introduce-body{
+    line-height:1.25rem;
+    padding-top:0.56rem;
+}
+.doctorlist-generalservice-title{
+    height:1.87rem;
+    line-height:1.87rem;
+    border-bottom:1px solid #eeeeee;
+    color:#3d3d3d;
+}
+.doctorlist-generalservice-body{
+    height:2.63rem;
+    line-height:2.63rem;
+    color:#898989;
+}
+.doctorlist-patientinformation{
+    margin-top:5px;
+    background:#fff;
+    height:4.5rem;
+    text-indent:1rem;
+}
+.doctorlist-patientinformation-title{
+    height:1.87rem;
+    line-height:1.87rem;
+    border-bottom:1px solid #eeeeee;
+    color:#3d3d3d;
+}
+.doctorlist-patientinformation-body{
+    height:2.63rem;
+    line-height:2.63rem;
+    color:#898989;
+    display:-webkit-box;
+}
+.doctorlist-patientinformation-body-patient-visits{
+    -webkit-box-flex:1;
+    /* margin-left: 1rem; */
+}
+.doctorlist-patientinfomation-body-signnum{
+    margin-right:2.06rem;
+}
+.doctorlist-patientinfomation-body-signnum>span{
+    color:#00acee; 
+}
+.doctorlist-servicecontent{
+    width:100%;
+    min-height:9.81rem;
+    background:#fff;
+    margin-top:5px;
+    padding-left:1rem;
+}
+.doctorlist-servicecontent-title{
+    height:1.87rem;
+    line-height:1.87rem;
+    border-bottom:1px solid #eeeeee;
+    color:#3d3d3d;
+}
+.doctorlist-servicecontent-body{
+    line-height:1.25rem;
+    overflow:scroll;
+    padding-top:0.56rem;
+}
+.doctorlist-servicenote{
+    height:6.09rem;
+    background:#fff;
+    margin-top:5px;
+    text-indent:1rem;
+}
+.doctorlist-servicenote-title{
+    height:1.87rem;
+    line-height:1.87rem;
+    border-bottom:1px solid #eeeeee;
+    color:#3d3d3d;
+}
+.doctorlist-servicenote-body>p{
+    margin-bottom:0px;
+    line-height:1.25rem;
+}
+.doctorlist-servicenote-body-sign{
+    padding-top: 0.2rem;
+}
+.doctor-agreehomedoctor-sign{
+    height:2rem;
+    background:#fff;
+    margin-top:5px;
+    text-indent:2rem;
+    line-height:1.5rem;
+}
+.doctor-agreehomedoctor-sign>span{
+    margin-left:1.71rem;
+}

@@ -1,0 +1,64 @@
+<ion-view hide-nav-bar="false">
+    <ion-nav-title>注册</ion-nav-title>
+    <ion-nav-buttons side="left">
+        <button class="button button-clear button-back" ng-click="doSomething()">
+        <i class="ion-ios-close-outline"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content>
+    <form class="register-form" name="regForm" novalidate="true" ng-model="formData">
+        <div class="register-input-area">
+            <div class="item-input">
+                <span>手机号</span>
+                <input type="tel" name="mobile"
+                    required
+                    class="register-input"
+                    placeholder="请输入手机号"
+                    ng-model="formData.mobile">
+            </div>
+            <div class="item-input">
+                <span>密码</span>
+                <input type="password" name="pwd"
+                    maxlength="16"
+                    minlength="6"
+                    required
+                    ng-change="checkPwd(regForm)"
+                    class="register-input"
+                    placeholder="请输入密码"
+                    ng-model="formData.pwd">
+            </div>
+            <div class="item-input">
+                <span>确认密码</span>
+                <input type="password" name="confirmPwd"
+                    maxlength="16"
+                    minlength="6"
+                    required
+                    class="register-input"
+                    placeholder="请再次输入密码"
+                    ng-change="checkPwd(regForm)"
+                    ng-model="formData.confirmPwd">
+            </div>
+            <div class="item-input">
+                <span class="register-under-line">验证码</span>
+                <input type="number" name="code"
+                    required
+                    class="register-input register-under-line register-code"
+                    placeholder="请输入验证码"
+                    ng-model="formData.code">
+                <button class="button register-btn-color"
+                    ng-class="checkDisabled(regForm)?'button-light':'button-positive'"
+                    ng-disabled="checkDisabled(regForm)"
+                    ng-bind="codeText"
+                    ng-click="getCode()"></button>
+            </div>
+        </div>
+        <div class="register-submit-btn">
+            <button class="button button-block register-btn-color"
+            ng-class="regForm.$invalid?'button-light':'button-positive'"
+            ng-disabled="regForm.$invalid"
+            ng-click="register()">注册</button>
+        </div>
+        <div class="register-terms">已阅读并同意<a ui-sref="terms">《多点健康用户服务条款》</a></div>
+    </form>
+    </ion-content>
+</ion-view>

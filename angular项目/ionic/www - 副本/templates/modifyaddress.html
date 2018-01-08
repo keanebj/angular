@@ -1,0 +1,23 @@
+<ion-view hide-nav-bar="false">
+  <ion-nav-title>修改地址</ion-nav-title>
+    <ion-nav-buttons side="secondary">
+      <button class="button button-stable" ng-click="save()">
+       保存
+      </button>
+    </ion-nav-buttons>
+  <ion-content class="selectArea-wrapper">
+    <div class="list">
+      <a class="item item-icon-right" ng-click="selectArea(1)">
+          所在地区：
+          <span ng-bind="getFullPath()"></span>
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+      <div class="item">
+        <div>详细地址：</div>
+        <div class="modifaddress-minuteaddress">
+          <textarea ng-model="data.address" class="modifaddress-textarea" cols="30" rows="10" placeholder="请输入地址"></textarea>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

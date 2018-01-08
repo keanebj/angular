@@ -1,0 +1,78 @@
+<ion-view hide-nav-bar="false">
+  <ion-nav-title>我的服务</ion-nav-title>
+  <ion-nav-buttons side="secondary">
+  <button class="button button-small button-clear" ng-click="toggleMenu()"><i class="ion-navicon-round"></i></button>
+  </ion-nav-buttons>
+  <ion-content class="servicehome has-tabs">
+    <div class="servicehome-doctor" ng-if="user.signStatus == '1' || user.signStatus == '0'">
+      <div class="servicehome-doctor-head">
+        <img ngf-src="doctorInfo.headerImage||'./img/doctor.png'" class="servicehome-doctor-head-pic" alt="">
+        <div class="servicehome-doctor-head-job">{{doctorInfo.jobTitle}}</div>
+      </div>
+      <div class="servicehome-doctor-info">
+        <dic class="servicehome-doctor-name"><span>{{doctorInfo.realName}}</span>{{doctorInfo.age}}岁</dic>
+        <dic class="servicehome-doctor-title">{{doctorInfo.orgName}}|慢病科</dic>
+        <dic class="servicehome-doctor-tel">电话：{{doctorInfo.mobile}}</dic>
+      </div>
+      <div class="doctor-not-confirmed" ng-if="user.signStatus=='0'" ui-sref="cancelacontract({doctorId:user.doctorId})">
+        家庭医师<br>确认中……
+      </div>
+    </div>
+    <div class="servicehome-myservice">
+      <div class="servicehome-myprescription" ng-click="comeSoon()">
+        <i class="servicehome-lists icon-jiancha"></i>我的处方
+      </div>
+      <div class="servicehome-myservice-center">
+      </div>
+      <div class="service-mychecklist" ng-click="comeSoon()">
+        <i class="servicehome-lists icon-chufangxinxi"></i>
+        我的检查单
+      </div>
+    </div>
+    <div class="servicehome-list servicehome-first">
+      <dl ng-click="comeSoon()">
+        <dt><i class="servicehome-lists icon-zixun"></i></dt>
+        <dd>图文咨询</dd>
+      </dl>
+      <dl ui-sref="appointment({type:'TEL_SCHEDULE'})">
+        <dt><i class="servicehome-lists icon-shouji"></i></dt>
+        <dd>电话预约</dd>
+      </dl>
+      <dl ui-sref="appointment({type:'VEDIO_SCHEDULE'})">
+        <dt><i class="servicehome-lists icon-video-copy"></i></dt>
+        <dd>视频预约</dd>
+      </dl>
+    </div>
+    <div class="servicehome-list">
+      <dl ui-sref="appointment({type:'OUTPATIENT'})">
+        <dt><i class="servicehome-lists icon-yiyao"></i></dt>
+        <dd>就诊预约</dd>
+      </dl>
+      <dl ng-click="comeSoon()">
+        <dt><i class="servicehome-lists icon-yao"></i></dt>
+        <dd>送药</dd>
+      </dl>
+      <dl ng-click="comeSoon()">
+        <dt><i class="servicehome-lists icon-kangfu"></i></dt>
+        <dd>康复</dd>
+      </dl>
+    </div>
+    <div class="servicehome-list">
+      <dl ng-click="comeSoon()">
+        <dt><i class="servicehome-lists icon-peizhenfuwurenqun"></i></dt>
+        <dd>陪诊</dd>
+      </dl>
+      <dl ng-click="comeSoon()">
+        <dt><i class="servicehome-lists icon-zixun"></i></dt>
+        <dd>随访</dd>
+      </dl>
+      <dl ng-click="comeSoon()">
+        <dt><i class="servicehome-lists icon-tijian"></i></dt>
+        <dd>体检</dd>
+      </dl>
+    </div>
+    <div class="servicehome-lists-buttom-bar" ng-if="user.signStatus != '0' && user.signStatus !='1'">
+      <button class="button button-full button-energized" ng-click="goSign()">我要签约</button>
+    </div>
+  </ion-content>
+  </ion-view>

@@ -1,0 +1,58 @@
+<ion-view hide-nav-bar="false">
+  <ion-nav-title>个人信息</ion-nav-title>
+  <ion-content class="modifyuserin">
+  <div class="modifyuserinfo">
+    <div class="modifyuserinfo-info">
+      <div class="modifyuserinfo-info-headpic" ngf-select="selectFiles($files)" ngf-accept="'image/*'">
+        <div class="modifyuserinfo-headpic-text">头像</div>
+        <div class="modifyuserinfo-headpic-img">
+          <img ngf-src="user.headerImage?user.headerImage+'-suishi200':'./img/myhome-userimg.png'" alt="">
+        </div>
+        <span>&gt;</span>
+      </div>
+      <div class="modifyuserinfo-info-name" ui-sref="modifyusername">
+        <div class="modifyuserinfo-headpic-name-text">姓名</div>
+        <div class="modifyuserinfo-headpic-username-text" ng-bind="user.name||'匿名'"></div>
+        <span>&gt;</span>
+      </div>
+      <div class="modifyuserinfo-info-name" ui-sref="modifySex">
+        <div class="modifyuserinfo-headpic-name-text">性别</div>
+        <div class="modifyuserinfo-headpic-username-text" ng-bind="{1:'男',2:'女',null:'男'}[user.sex]"></div>
+        <span>&gt;</span>
+      </div>
+      <div class="modifyuserinfo-info-name" ui-sref="modifyBirthday">
+        <div class="modifyuserinfo-headpic-name-text">出生日期</div>
+        <div class="modifyuserinfo-headpic-username-text" ng-model="user.birth" mobiscroll-datetime="dateSettings" ng-bind="user.birth|date:'yyyy年MM月dd日'"></div>
+        <span>&gt;</span>
+      </div>
+      <div class="modifyuserinfo-info-name" ui-sref="modifyMobile">
+        <div class="modifyuserinfo-headpic-name-text">手机</div>
+        <div class="modifyuserinfo-headpic-username-text" ng-bind="user.mobile"></div>
+        <span>&gt;</span>
+      </div>
+      <div class="modifyuserinfo-info-name">
+        <div class="modifyuserinfo-headpic-name-text">固话</div>
+        <div class="modifyuserinfo-headpic-username-text modifyuserinfo-tel" ng-bind="user.telphone"></div>
+        <!-- <span>&gt;</span> -->
+      </div>
+      <div class="modifyuserinfo-info-name" ui-sref="modifyaddress">
+        <div class="modifyuserinfo-headpic-name-address">地址</div>
+        <div class="modifyuserinfo-addredd" ng-bind-template="{{user.provinceName}} {{user.cityName}} {{user.districtName}} {{user.addr}}"></div>
+        <span>&gt;</span>
+      </div>
+    </div>
+    <div class="modifyuserinfo-info social-security">
+      <div class="modifyuserinfo-info-name">
+        <div class="modifyuserinfo-headpic-name-text">社保号</div>
+        <div class="modifyuserinfo-headpic-username-text" ng-bind="user.socialSecNo"></div>
+        <span></span>
+      </div>
+      <div class="modifyuserinfo-info-name">
+        <div class="modifyuserinfo-headpic-name-text">健康档案编号</div>
+        <div class="modifyuserinfo-headpic-username-text" ng-bind="user.fileNo"></div>
+        <span></span>
+      </div>
+    </div>
+    </div>
+  </ion-content>
+</ion-view>

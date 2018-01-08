@@ -1,0 +1,30 @@
+<ion-view hide-nav-bar="false">
+<ion-nav-title>设置</ion-nav-title>
+<ion-content class="content-list-wrapper">
+<div class="content-list">
+  <div class="content-list-item" ui-sref="modifyPassword">
+    <div class="content-list-item-label">修改密码</div>
+    <div class="content-list-item-text"></div>
+    <span><i class="ion-ios-arrow-forward"></i></span>
+  </div>
+  <div class="content-list-item" ng-click="clearCache()" ng-model="_popup" close-popup-back-drop>
+    <div class="content-list-item-label">清除缓存</div>
+    <div class="content-list-item-text">10.5MB</div>
+    <span><i class="ion-ios-arrow-forward"></i></span>
+  </div>
+  <div class="content-list-item">
+    <div class="content-list-item-label">检测版本更新</div>
+    <div class="content-list-item-text">v1.0.0</div>
+    <span><i class="ion-ios-arrow-forward"></i></span>
+  </div>
+  <div class="content-list-item">
+    <div class="content-list-item-label">关于我们</div>
+    <div class="content-list-item-text"></div>
+    <span><i class="ion-ios-arrow-forward"></i></span>
+  </div>
+</div>
+<div>
+  <button class="button setting-button-quit-login" ng-click="logout()">退出登录</button>
+</div>
+</ion-content>
+</ion-view>

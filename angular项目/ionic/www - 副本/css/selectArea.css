@@ -1,0 +1,13 @@
+.selectArea-input{
+  height:1.6rem;
+  border:none;
+}
+.selectArea-wrapper .item{
+  padding: 0.5rem 2.12rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+.selectArea-wrapper .item>i{
+  font-size: 1.4rem;
+  color: #999;
+}

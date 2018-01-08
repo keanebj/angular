@@ -1,0 +1,34 @@
+<ion-view hide-nav-bar="false">
+  <ion-nav-title>我的家庭医生</ion-nav-title>
+  <ion-content class="modifyaddress">
+    <div class="mydoctor">
+      <div class="myhomedoctor-doctor">
+        <dl>
+          <dt>
+            <img ngf-src="doctor.headerImage||'./img/doctor.png'">
+            <div class="mydoctor-title" ng-bind="doctor.jobTitle"></div>
+          </dt>
+          <dd class="myhomedoctor-name" ng-bind="doctor.realName"></dd>
+          <dd class="myhomedoctor-post">
+            <span ng-bind="doctor.orgName"></span>
+            <span ng-bind="doctor.job"></span>&nbsp;
+            <span ng-bind="doctor.departmentName"></span>
+          </dd>
+        </dl>
+      </div>
+    </div>
+    <div class="myhomedoctor-service-time">
+      服务期限
+    </div>
+    <div class="myhomedoctor-service-date-time">
+      <span ng-if="user.startDate && user.endDate">{{user.startDate|date:'yyyy年MM月'}}至{{user.endDate|date:'yyyy年MM月'}}</span>
+      <span ng-if="!user.startDate && !user.endDate">--&nbsp;至&nbsp;--</span>
+    </div>
+    <div class="myhomedoctor-service-content">
+      服务内容
+    </div>
+    <div class="myhomedoctor-service-cont">
+      黑龙江和平医院业务院长，博士生导师我省资深内科专家专家专家，首都医科大学宣武医院特别顾问，中国美国三国执照医师，多年从事三甲理工作。黑龙江和平医院业务院长，博士生导师我省资深内科专家专家专家，首都医科大学宣武医院特别顾问，中国美国三国执照医师，多年从事三甲理工作。
+    </div>
+  </ion-content>
+</ion-view>

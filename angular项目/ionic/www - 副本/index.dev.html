@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link rel="manifest" href="manifest.json">
+
+    <link href="lib/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link href="lib/font_3fnt1dxch8dgf1or/iconfont.css" rel="stylesheet">
+    <link href="lib/font_3n8ijw0rtua0pb9/iconfont.css" rel="stylesheet">
+    <link href="lib/font_urnzgllw52g4aemi/iconfont.css" rel="stylesheet">
+    <link href="lib/mobiscroll/css/mobiscroll.angular.min.css" rel="stylesheet"/>
+    <link href="lib/font_5r09bg3fkkmlsor/iconfont.css" rel="stylesheet"/>
+    <link href="lib/font_g7csj83uklr6n7b9/iconfont.css" rel="stylesheet"/>
+    <link href="css/ionic.app.min.css" rel="stylesheet">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <!-- build:css css/app.css -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+    <link href="css/register.css" rel="stylesheet">
+    <link href="css/healthFiles.css" rel="stylesheet">
+    <link href="css/schedule.css" rel="stylesheet">
+    <link href="css/myhome.css" rel="stylesheet">
+    <link href="css/modifyuserinfo.css" rel="stylesheet">
+    <link href="css/modifymobile.css" rel="stylesheet">
+    <link href="css/modifyaddress.css" rel="stylesheet">
+    <link href="css/modifyPassword.css" rel="stylesheet">
+    <link href="css/modifySex.css" rel="stylesheet">
+    <link href="css/modifyName.css" rel="stylesheet">
+    <link href="css/selectArea.css" rel="stylesheet">
+    <link href="css/suggest.css" rel="stylesheet">
+    <link href="css/familylist.css" rel="stylesheet">
+    <link href="css/modifyusername.css" rel="stylesheet">
+    <link href="css/myhomedoctor.css" rel="stylesheet">
+    <link href="css/setting.css" rel="stylesheet">
+    <link href="css/recordbloodfat.css" rel="stylesheet">
+    <link href="css/recordbloodglucose.css" rel="stylesheet">
+    <link href="css/recordbloodpressure.css" rel="stylesheet">
+    <link href="css/recordbmi.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
+    <link href="css/docupload.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/servicehome.css" rel="stylesheet">
+    <link href="css/addfamily.css" rel="stylesheet">
+    <link href="css/doctorlist.css" rel="stylesheet">
+    <link href="css/doctordetail.css" rel="stylesheet">
+    <link href="css/family-relationship.css" rel="stylesheet">
+    <link href="css/telephonereservation.css" rel="stylesheet">
+    <!-- endbuild -->
+
+    <!-- build:js lib.js -->
+    <script src="lib/jquery/jquery-1.8.3.js"></script>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ng-file-upload/ng-file-upload-all.js"></script>
+    <script src="lib/mobiscroll/js/mobiscroll.angular.min.js"></script>
+    <script src="lib/highcharts/highcharts.js"></script>
+    <!-- endbuild -->
+
+    <!-- <script src="cordova.js"></script> -->
+
+    <!-- build:js app.js -->
+    <script src="dist/js/src/templates.js"></script>
+    <script src="dist/js/src/app.js"></script>
+    <script src="dist/js/src/controllers.js"></script>
+    <script src="dist/js/src/directives.js"></script>
+    <script src="dist/js/src/services.js"></script>
+    <script src="dist/js/src/constants.js"></script>
+    <script src="dist/js/src/filters.js"></script>
+    <script src="dist/js/src/controllers/register.js"></script>
+    <script src="dist/js/src/controllers/healthFiles.js"></script>
+    <script src="dist/js/src/controllers/schedule.js"></script>
+    <script src="dist/js/src/controllers/selectArea.js"></script>
+    <script src="dist/js/src/controllers/modifyuserinfo.js"></script>
+    <script src="dist/js/src/controllers/modifySex.js"></script>
+    <script src="dist/js/src/controllers/modifyMobile.js"></script>
+    <script src="dist/js/src/controllers/modifyPassword.js"></script>
+    <script src="dist/js/src/controllers/modifyAddress.js"></script>
+    <script src="dist/js/src/controllers/modifyName.js"></script>
+    <script src="dist/js/src/controllers/modifyBirthday.js"></script>
+    <script src="dist/js/src/controllers/setting.js"></script>
+    <script src="dist/js/src/controllers/recordbloodpressure.js"></script>
+    <script src="dist/js/src/controllers/recordbloodglucose.js"></script>
+    <script src="dist/js/src/controllers/recordbloodfat.js"></script>
+    <script src="dist/js/src/controllers/recordbmi.js"></script>
+    <script src="dist/js/src/controllers/login.js"></script>
+    <script src="dist/js/src/controllers/menu.js"></script>
+    <script src="dist/js/src/controllers/main.js"></script>
+    <script src="dist/js/src/controllers/navCtrl.js"></script>
+    <script src="dist/js/src/controllers/home.js"></script>
+    <script src="dist/js/src/controllers/homeIndex.js"></script>
+    <script src="dist/js/src/controllers/family-relationship.js"></script>
+    <script src="dist/js/src/controllers/docupload.js"></script>
+    <script src="dist/js/src/controllers/appointment.js"></script>
+    <script src="dist/js/src/controllers/doctorlistCtrl.js"></script>
+    <script src="dist/js/src/controllers/cancelacontractCtrl.js"></script>
+    <script src="dist/js/src/controllers/serviceHome.js"></script>
+    <script src="dist/js/src/controllers/myhome.js"></script>
+    <script src="dist/js/src/controllers/familylist.js"></script>
+    <script src="dist/js/src/controllers/addfamily.js"></script>
+    <script src="dist/js/src/controllers/myhome.js"></script>
+    <script src="dist/js/src/controllers/myhomedoctor.js"></script>
+   <!--  <script src="dist/js/src/controllers/addfamily.js"></script>
+    <script src="dist/js/src/controllers/familylist.js"></script> -->
+
+    <script src="dist/js/src/services/UserService.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body ng-app="homeApp" ng-controller="mainCtrl">
+    <ion-side-menus>
+        <ion-side-menu-content edge-drag-threshold="false" drag-content="true">
+          <ion-nav-bar class="bar-positive" ng-class="bgColorClass" ng-controller="navCtrl" align-title="center">
+            <ion-nav-back-button class="button button-clear button-back">
+              <i class="ion-ios-arrow-back"></i>
+            </ion-nav-back-button>
+          </ion-nav-bar>
+          <ion-nav-view></ion-nav-view>
+        </ion-side-menu-content>
+        <ion-side-menu side="left" ng-controller="menuCtrl">
+            <ion-content class="index">
+                <div class="index-userinfo">
+                  <dl>
+                    <dt class="index-user-head"><img ngf-src="user.headerImage||'./img/doctor.png'" alt=""></dt>
+                    <dd class="index-user-name">{{user.name}}<span>VIP</span></dd>
+                    <dd class="index-user-sex">男<span>|</span> {{user.age}}岁</dd>
+                  </dl>
+                  <div class="index-user-address"><i class="fa fa-map-marker index-address"></i>{{user.addr}}</div>
+                </div>
+                <div class="index-message">
+                  <div class="index-message-info">
+                    <span class="index-message-logo">
+                      <img src="./img/index-message-logo.png" alt="">
+                    </span>
+                    <div class="index-mymessage">我的消息</div>
+                  </div>
+                  <span class="index-message-num">
+                    20
+                  </span>
+                </div>
+                <div class="index-change-user">
+                  <div class="index-change-title">
+                    用户切换
+                  </div>
+                  <div class="index-change-user-list">
+                    <div class="index-change-user-list-num" ng-click="shiftuser(user.userId)">
+                      <span class="index-change-user-list-num-pic">
+                        <img ngf-src="user.headerImage||'./img/doctor.png'" alt="">
+                      </span>
+                      <div class="index-change-user-list-name">
+                        {{user.name}}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="index-change-user-list">
+                    <div class="index-change-user-list-num" ng-repeat="familylist in familylist" ng-click="shiftuser(familylist.id)">
+                      <span class="index-change-user-list-num-pic">
+                        <img ngf-src="familylist.headerImage||'./img/doctor.png'" alt="">
+                      </span>
+                      <div class="index-change-user-list-name">
+                        {{familylist.relUserName}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="index-addfamily">
+
+                </div>
+            </ion-content>
+        </ion-side-menu>
+    </ion-side-menus>
+  </body>
+</html>

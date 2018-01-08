@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link rel="manifest" href="manifest.json">
+
+    <link href="lib/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link href="lib/font_3fnt1dxch8dgf1or/iconfont.css" rel="stylesheet">
+    <link href="lib/font_3n8ijw0rtua0pb9/iconfont.css" rel="stylesheet">
+    <link href="lib/font_urnzgllw52g4aemi/iconfont.css" rel="stylesheet">
+    <link href="lib/mobiscroll/css/mobiscroll.angular.min.css" rel="stylesheet"/>
+    <link href="lib/font_5r09bg3fkkmlsor/iconfont.css" rel="stylesheet"/>
+    <link href="lib/font_g7csj83uklr6n7b9/iconfont.css" rel="stylesheet"/>
+    <link href="css/ionic.app.min.css" rel="stylesheet">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link rel="stylesheet" href="css/app.min.css">
+
+    <script src="lib.min.js"></script>
+
+    <!-- <script src="cordova.js"></script> -->
+
+    <script src="app.min.js"></script>
+  </head>
+  <body ng-app="homeApp" ng-controller="mainCtrl">
+    <ion-side-menus>
+        <ion-side-menu-content edge-drag-threshold="false" drag-content="true">
+          <ion-nav-bar class="bar-positive" ng-class="bgColorClass" ng-controller="navCtrl" align-title="center">
+            <ion-nav-back-button class="button button-clear button-back">
+              <i class="ion-ios-arrow-back"></i>
+            </ion-nav-back-button>
+          </ion-nav-bar>
+          <ion-nav-view></ion-nav-view>
+        </ion-side-menu-content>
+        <ion-side-menu side="left" ng-controller="menuCtrl">
+            <ion-content class="index">
+                <div class="index-userinfo">
+                  <dl>
+                    <dt class="index-user-head"><img ngf-src="user.headerImage||'./img/doctor.png'" alt=""></dt>
+                    <dd class="index-user-name">{{user.name}}<span>VIP</span></dd>
+                    <dd class="index-user-sex">男<span>|</span> {{user.age}}岁</dd>
+                  </dl>
+                  <div class="index-user-address"><i class="fa fa-map-marker index-address"></i>{{user.addr}}</div>
+                </div>
+                <div class="index-message">
+                  <div class="index-message-info">
+                    <span class="index-message-logo">
+                      <img src="./img/index-message-logo.png" alt="">
+                    </span>
+                    <div class="index-mymessage">我的消息</div>
+                  </div>
+                  <span class="index-message-num">
+                    20
+                  </span>
+                </div>
+                <div class="index-change-user">
+                  <div class="index-change-title">
+                    用户切换
+                  </div>
+                  <div class="index-change-user-list">
+                    <div class="index-change-user-list-num" ng-click="shiftuser(user.userId)">
+                      <span class="index-change-user-list-num-pic">
+                        <img ngf-src="user.headerImage||'./img/doctor.png'" alt="">
+                      </span>
+                      <div class="index-change-user-list-name">
+                        {{user.name}}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="index-change-user-list">
+                    <div class="index-change-user-list-num" ng-repeat="familylist in familylist" ng-click="shiftuser(familylist.id)">
+                      <span class="index-change-user-list-num-pic">
+                        <img ngf-src="familylist.headerImage||'./img/doctor.png'" alt="">
+                      </span>
+                      <div class="index-change-user-list-name">
+                        {{familylist.relUserName}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="index-addfamily">
+
+                </div>
+            </ion-content>
+        </ion-side-menu>
+    </ion-side-menus>
+  </body>
+</html>

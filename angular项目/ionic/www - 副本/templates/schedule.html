@@ -1,0 +1,92 @@
+<ion-view hide-nav-bar="false">
+<ion-nav-title>我的预约</ion-nav-title>
+<ion-content scroll="false">
+<div class="healthFiles-tab-header">
+  <li ng-repeat="x in tabNames" ng-click="toggleTab($index)" ng-class="$index==slider.activeIndex?'active':''">
+    <span ng-bind="x"></span>
+  </li>
+</div>
+<ion-slides class="healthFiles-slides" slider="data.slider">
+<ion-slide-page>
+<ion-content>
+<ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+<ion-scroll>
+<div class="schedule-content-wrapper">
+  <div>
+    <div class="now-schedule-list">
+      <div class="schedule-user-info">
+        <div class="schedule-user-info-head"><img ngf-src="doctorInfo.headerImage?doctorInfo.headerImage+'-suishi200':'img/user.png'" alt=""></div>
+        <div class="schedule-user-info-name">
+          <span ng-bind="doctorInfo.realName"></span> <br />
+          <em ng-bind="doctorInfo.age||46"></em>岁 | <em ng-bind="{'1':'男','2':'女',null:'男'}[doctorInfo.sex]"></em>
+        </div>
+        <div class="schedule-user-info-all">
+          <i class="servicehome-lists icon-shouji"
+            ng-click="doFilter('TEL_SCHEDULE')"
+            ng-class="{'servicehome-lists-active':filter=='TEL_SCHEDULE'}"></i>
+          <i class="servicehome-lists icon-video-copy"
+            ng-click="doFilter('VEDIO_SCHEDULE')"
+            ng-class="{'servicehome-lists-active':filter=='VEDIO_SCHEDULE'}"></i>
+          <i class="servicehome-lists icon-yiyao"
+            ng-click="doFilter('OUTPATIENT')"
+            ng-class="{'servicehome-lists-active':filter=='OUTPATIENT'}"></i>
+          <span ng-click="doFilter('')" ng-class="{'servicehome-lists-active':filter==''}">全部</span>
+        </div>
+      </div>
+    </div>
+    <div class="healthFiles-content-wrapp now-schedule-list" ng-repeat="x in listCurrentSchedule.pageList">
+      <div class="now-schedule now-schedule-one">
+        <div class="schedule-user-info">
+          <div class="schedule-user-info-tel">
+            <i class="servicehome-lists" ng-class="icon[x.scheduleType]"></i><span ng-bind="type[x.scheduleType]"></span>
+          </div>
+          <div class="schedule-user-info-date" ng-bind="x.workDate"></div>
+        </div>
+        <div class="schedule-time">
+          <span class="sch-time-hour" ng-bind="x.beginTime"></span>
+          <span class="sch-time-till">至</span><span class="sch-time-hour" ng-bind="x.endTime"></span>
+        </div>
+        <div class="schedule-symptom">症状：<span ng-bind="x.symptomDesc"></span></div>
+        <div class="schedule-remarks">备注：<span ng-bind="x.comments"></span></div>
+        <div class="schedule-btn">
+          <div><button class="button button-small button-update" ui-sref="appointment({type:x.scheduleType,id:x.id})">修改预约</button></div>
+          <div><button class="button button-small button-cancel" ng-click="cancel(x)" ng-model="_popup" close-popup-back-drop>取消预约</button></div>
+        </div>
+      </div>
+    </div>
+    <div ng-if="listCurrentSchedule.pageList.length==0">没有数据</div>
+  </div>
+</div>
+</ion-scroll>
+<ion-infinite-scroll ng-if="canLoadMore(0)" distance="10%" immediate-check="false" on-infinite="loadMoreData()"/>
+</ion-content>
+</ion-slide-page>
+<ion-slide-page>
+<ion-content>
+<ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+<ion-scroll>
+<div class="schedule-content-wrapper">
+  <div class="history-schedule">
+    <div class="healthFiles-content-wrapp now-schedule-list" ng-repeat="x in listHistorySchedule.pageList">
+      <div class="history-schedule now-schedule-one">
+        <div class="history-schedule-user">
+          <div class="histroy-schedule-date">
+            <span ng-bind="x.workDate|date:'d'">19</span><em ng-bind="x.workDate|date:'MM月'">10月</em>
+          </div>
+          <div class="history-schedule-info">
+            <div class="history-schedule-time">{{x.beginTime}}至{{x.endTime}} <span class="servicehome-lists"><i class=" icon-shouji"></i></span>  </div>
+            <div class="history-schedule-symptom">症状：<span ng-bind="x.symptomDesc"></span></div>
+            <div class="history-schedule-remarks">备注：<span ng-bind="x.comments"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</ion-scroll>
+<ion-infinite-scroll ng-if="canLoadMore(1)" distance="10%" immediate-check="false" on-infinite="loadMoreData()"/>
+</ion-content>
+</ion-slide-page>
+</ion-slides>
+</ion-content>
+</ion-view>

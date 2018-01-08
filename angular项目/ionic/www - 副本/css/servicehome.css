@@ -1,0 +1,161 @@
+.servicehome{
+    background:#eeeeee;
+}
+.servicehome-doctor{
+    background:#fff;
+    width:100%;
+    height:5rem;
+    display:-webkit-box;
+}
+.servicehome-doctor-head{
+    width:3.87rem;
+    height:3.87rem;
+    position:relative;
+    margin-left:1rem;
+    border-radius:50%;
+}
+.servicehome-doctor-head>img{
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+    margin-top:5px;
+}
+.servicehome-doctor-head-job{
+    position:absolute;
+    top: 55px;
+    left:0px;
+    width: 3.87rem;
+    height:1rem;
+    background:#00acee;
+    font-size: 10px;
+    text-align:center;
+    line-height:1rem;
+    border-radius:0.3rem;
+    color:#ffffff;
+    display: inherit;
+}
+.servicehome-doctor-info{
+    margin-left:1rem;
+    margin-top:1rem;
+    -webkit-box-flex: 1;
+}
+.servicehome-doctor-name{
+    display:block;
+    font-size:0.75rem;
+}
+.servicehome-doctor-name>span{
+    font-size:0.88rem;
+    /* font-weight:bold; */
+    margin-right:5px;
+}
+.servicehome-doctor-title{
+    display:block;
+    font-size:0.62rem;
+}
+.servicehome-doctor-tel{
+    font-size:0.662rem;
+}
+.servicehome-myservice{
+    display:-webkit-box;
+    height:2.5rem;
+    margin-top:5px;
+    background:#fff;
+}
+.servicehome-myprescription{
+    text-align:center;
+    line-height:2.5rem;
+    -webkit-box-flex:1;
+}
+.service-mychecklist{
+    -webkit-box-flex:1;
+    text-align:center;
+    line-height:2.5rem;
+}
+.servicehome-myservice-center{
+    width:1px;
+    background:#dedfe0;
+    height:1.25rem;
+    margin-top:0.62rem;
+}
+.servicehome-list{
+    width:100%;
+    height:6.56rem;
+    display:-webkit-box;
+    background:#fff;
+    border-bottom: 1px solid #ccc;
+}
+.servicehome-list>dl{
+    /* -webkit-box-flex:1; */
+    display:-webkit-box;
+    min-width: 33.3%;
+    -webkit-box-orient:vertical;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+    border-right:1px solid #ccc;
+    margin-bottom: 0px;
+    overflow: hidden;
+}
+.servicehome-list>dl>dt{
+    display:-webkit-box;
+    width:1.5rem;
+    height:1.5rem;
+    margin-bottom: 1rem;
+}
+.servicehome-list>dl>dt>img{
+    width:100%;
+    height:100%;
+}
+.servicehome-first{
+    margin-top:10px;
+    
+}
+.icon-zixun{
+    color:#ff4b4b;
+}
+.icon-shouji{
+    color:#32ab71;
+}
+.icon-video-copy{
+    color:#32ab71;
+}
+.icon-yiyao{
+    color:#3790ba;
+}
+.icon-yao{
+    color:#ff4b4b;
+}
+.icon-kangfu{
+    color:#ff4b4b;
+}
+.icon-peizhenfuwurenqun{
+    color:#32ab71;
+}
+.icon-tijian{
+    color:#3790ba;
+}
+.icon-jiancha{
+    font-size:1rem;
+    margin-right:10px;
+    color:#43c2f2;
+}
+.icon-chufangxinxi{
+    font-size:1rem;
+    margin-right:10px;
+    color:#43c2f2;
+}
+.doctor-not-confirmed{
+    width:4.93rem;
+    height:auto;
+    background:#fdb700;
+    text-align: center;
+    padding-top: 1.26rem;
+    color: #ffffff;
+}
+.servicehome-lists-buttom-bar{
+    margin-top: 0.5rem;
+    padding:1rem;
+    background: #fff;
+}
+.servicehome-lists-buttom-bar>button{
+    border-radius:5px;
+}

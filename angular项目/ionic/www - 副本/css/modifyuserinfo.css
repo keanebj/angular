@@ -1,0 +1,80 @@
+.modifyuserinfo-info{
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    width:100%;
+    height:100%;
+    background:#ffffff;
+}
+.modifyuserinfo-info-headpic{
+    width:91%;
+    margin:0 auto;
+    display:-webkit-box;
+    -webkit-box-align:center;
+    height:4.3rem;
+    line-height:4.3rem;
+    border-bottom:1px solid #dedfe0;
+}
+.modifyuserinfo-headpic-text{
+    font-size:14px;
+    /* font-weight:bold; */
+    -webkit-box-flex:1;
+}
+.modifyuserinfo-headpic-img{
+    width:3.125rem;
+    height:3.125rem;
+}
+.modifyuserinfo-headpic-img>img{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+}
+.modifyuserinfo-info-headpic>span{
+    width:10px;
+    margin-left:12px;
+}
+.modifyuserinfo-info-name{
+    width:91%;
+    margin:0 auto;
+    display:-webkit-box;
+    -webkit-box-align:center;
+    height:2.3rem;
+    line-height:2.3rem;
+    border-bottom:1px solid #dedfe0;
+}
+.modifyuserinfo-headpic-name-text{
+    font-size:14px;
+    /* font-weight:bold; */
+}
+.modifyuserinfo-headpic-username-text{
+    -webkit-box-flex:1;
+    text-align:right;
+}
+.modifyuserinfo-addredd{
+    text-align:right;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+    width: 143px;
+}
+.modifyuserinfo-info-name>span{
+    width:10px;
+    margin-left:12px;
+}
+.modifyuserinfo-tel{
+    margin-right:20px;
+}
+.social-security{
+    margin-top: 10px;
+}
+.modifyuserinfo{
+    background:#eeeeee;
+}
+.modifyuserin{
+    min-height:100%;
+    background:#eeeeee;
+}
+.modifyuserinfo-headpic-name-address{
+    -webkit-box-flex:1;
+    font-size:14px;
+    /* font-weight:bold; */
+}

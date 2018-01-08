@@ -1,0 +1,73 @@
+.recordbmi{
+    width:100%;
+    background:#eeeeee;
+}
+.recordbmi-img{
+    width:100%;
+    height:11.12rem;
+    background:#4a89ca;
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+}
+.recordbmi-img>img{
+    display:inline-block;
+    width:4.31rem;
+    height:5rem;
+}
+.recordbmi-date{
+    height:2.81rem;
+    border-bottom:1px solid #eeeeee;
+    background:#fff;
+    line-height:2.81rem;
+    padding-left:1rem;
+    font-size:0.87rem;
+}
+.recordbmi-time-pressure{
+    width:100%;
+    height:6.93rem;
+    background:#fff;
+    display:-webkit-box;
+}
+.recordbmi-time-tallpressure{
+    -webkit-box-flex:1;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+    width: 0;
+}
+.recordbmi-time-tall-num{
+    font-size:0.87rem;
+}
+.recordbmi-time-tall-num>span{
+    font-size:1.43rem;
+}
+.recordbmi-time-tall-text{
+    margin-top:1.68rem;
+    font-size:0.75rem;
+}
+.recordbmi-time-lowpressure{
+    -webkit-box-flex:1;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+    width: 0;
+}
+.recordbmi-time-low-num{
+    font-size:0.87rem;
+}
+.recordbmi-time-low-num>span{
+    font-size:1.43rem;
+}
+.recordbmi-time-low-text{
+    margin-top:1.68rem;
+    font-size:0.75rem;
+}
+.bloodpressure-tall-low{
+    width:1px;
+    height:4rem;
+    background:#dedfe0;
+    margin-top:1.37rem;
+}

@@ -1,0 +1,53 @@
+.recordbloodfat{
+    width:100%;
+    background:#eeeeee;
+}
+.recordbloodfat-img{
+    width:100%;
+    height:11.12rem;
+    background:#8374ca;
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+}
+.recordbloodfat-img>img{
+    display:inline-block;
+    width:4.31rem;
+    height:5rem;
+}
+.recordbloodfat-date{
+    height:2.81rem;
+    border-bottom:1px solid #eeeeee;
+    background:#fff;
+    line-height:2.81rem;
+    padding-left:1rem;
+    font-size:0.87rem;
+}
+.recordbloodfat-time-pressure-record{
+    font-size:0.625rem;
+    width: 100%;
+    text-align: center;
+}
+.recordbloodfat-time-pressure-num{
+    font-size:1.4rem;
+}
+.recordbloodfat-time-pressure{
+    width:100%;
+    height:6.93rem;
+    background:#fff;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+}
+.recordbloodfat-subsisted{
+    margin-top:1rem;
+    font-size:0.75rem;
+}
+.recordbloodfat-subsisted-time{
+    margin-top:0.75rem;
+    font-size:0.75rem;
+}
+.recordbloodfat-subsisted-check{
+    color:#00acee;
+}
